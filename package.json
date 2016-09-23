@@ -29,5 +29,8 @@
     "eslint": "^3.5.0",
     "expect": "^1.20.2",
     "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "panic-client": "^0.2.0"
   }
 }

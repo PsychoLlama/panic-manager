@@ -176,7 +176,7 @@ module.exports = {
 		"no-useless-concat": "error",
 		"no-useless-constructor": "error",
 		"no-useless-escape": "error",
-		"no-var": "error",
+		"no-var": "off",
 		"no-void": "error",
 		"no-warning-comments": "error",
 		"no-whitespace-before-property": "error",
@@ -196,7 +196,7 @@ module.exports = {
 		"prefer-reflect": "off",
 		"prefer-rest-params": "off",
 		"prefer-spread": "off",
-		"prefer-template": "error",
+		"prefer-template": "off",
 		"quote-props": "off",
 		"quotes": [
 			"error",
