@@ -2,6 +2,8 @@
 *Manage panic clients like a pro*
 
 [![Travis branch](https://img.shields.io/travis/PsychoLlama/panic-manager/master.svg?style=flat-square)](https://travis-ci.org/PsychoLlama/panic-manager)
+[![npm](https://img.shields.io/npm/v/panic-manager.svg?style=flat-square)](https://www.npmjs.com/package/panic-manager)
+[![npm](https://img.shields.io/npm/dt/panic-manager.svg?style=flat-square)](https://www.npmjs.com/package/panic-manager)
 
 Bored by documentation and just want runnable code? Here's the [quickstart](#quickstart).
 
