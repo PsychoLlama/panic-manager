@@ -1,9 +1,9 @@
 'use strict';
-const { describe, it, beforeEach } = require('mocha');
+const { describe, it, beforeEach, afterEach } = require('mocha');
 const expect = require('expect');
-// const { spyOn } = expect;
-// const ChildProcess = require('child_process');
-// const spy = spyOn(ChildProcess, 'fork');
+const { spyOn } = expect;
+const ChildProcess = require('child_process');
+const spy = spyOn(ChildProcess, 'fork');
 const Manager = require('./Manager');
 
 describe('A manager', () => {
@@ -13,6 +13,8 @@ describe('A manager', () => {
 	beforeEach(() => {
 		manager = new Manager();
 	});
+
+	afterEach(() => spy.reset());
 
 	it('should be constructable without `new`', () => {
 		const manager = Manager();
@@ -50,6 +52,14 @@ describe('A manager', () => {
 				panic: 'url',
 			});
 			expect(fail).toThrow(/client.type/i);
+		});
+
+		it('should spawn the requested processes', () => {
+			manager.start({
+				clients: [{ type: 'node' }],
+				panic: 'url',
+			});
+			expect(spy).toHaveBeenCalled();
 		});
 
 	});

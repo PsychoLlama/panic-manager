@@ -1,6 +1,7 @@
 'use strict';
 
 var isArray = require('isarray');
+var spawn = require('./spawn-clients');
 
 /**
  * Validate a config object.
@@ -46,6 +47,8 @@ function validate (config) {
  * @class Manager
  */
 function Manager () {
+
+	/** Allow usage without `new`. */
 	if (!(this instanceof Manager)) {
 		return new Manager();
 	}
@@ -54,10 +57,19 @@ function Manager () {
 Manager.prototype = {
 	constructor: Manager,
 
+	/**
+	 * Dispatch the request to the manager responsible.
+	 *
+	 * @param  {Object} config - The configuration object.
+	 * @returns {undefined}
+	 */
 	start: function (config) {
 
-		/** May throw. */
+		/** May throw validation errors. */
 		validate(config);
+
+		/** Creates the requested clients. */
+		spawn(config);
 	},
 };
 
