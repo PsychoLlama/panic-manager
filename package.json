@@ -2,7 +2,7 @@
   "name": "panic-manager",
   "version": "0.0.1",
   "description": "Programmatically spawn and destroy panic clients",
-  "main": "src/index.js",
+  "main": "src/Manager.js",
   "scripts": {
     "lint": "eslint src/",
     "test": "mocha 'src/**/*test.js' --opts mocha.opts"
