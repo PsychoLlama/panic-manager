@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/",
-    "test": "mocha src/**/*test.js --opts mocha.opts"
+    "test": "mocha 'src/**/*test.js' --opts mocha.opts"
   },
   "repository": {
     "type": "git",
