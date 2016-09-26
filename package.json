@@ -1,6 +1,6 @@
 {
   "name": "panic-manager",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Programmatically spawn and destroy panic clients",
   "main": "src/Manager.js",
   "scripts": {
